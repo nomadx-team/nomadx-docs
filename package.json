@@ -1,0 +1,57 @@
+{
+	"name": "nomadx-docs",
+	"private": true,
+	"version": "0.1.0",
+	"description": "Documentation site for Nomadx Elements",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run server",
+		"build": "stencil build --prerender",
+		"dev": "sd concurrent \"stencil build --dev --watch\" \"npm run server\" \"browser-sync start --config bs-config.js\" ",
+		"lint": "tslint --config tslint.json --project tsconfig.json",
+		"precommit": "npm run lint",
+		"server": "node server/build",
+		"server-watch": "sd concurrent \"tsc -p server/tsconfig.json --watch\" \"chokidar 'server/build/**/*.js' -c 'npm run server'\" \"npm run dev\"",
+		"preserver": "tsc -p server/tsconfig.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nomadx-team/nomadx-docs.git"
+	},
+	"author": "Nate Moore <nate@natemoo.re> (http://projects.natemoo.re/)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nomadx-team/nomadx-docs/issues"
+	},
+	"homepage": "https://github.com/nomadx-team/nomadx-docs#readme",
+	"dependencies": {
+		"@stencil/core": "^0.9.6",
+		"@stencil/helmet": "^0.2.5",
+		"@stencil/router": "^0.1.7",
+		"@stencil/sass": "0.0.5",
+		"@stencil/utils": "latest",
+		"@types/node": "^8.10.9",
+		"@types/semver": "^5.5.0",
+		"chokidar": "^2.0.2",
+		"chokidar-cli": "^1.2.0",
+		"compression": "^1.7.2",
+		"dotenv": "^5.0.1",
+		"express": "^4.16.2",
+		"front-matter": "^2.3.0",
+		"helmet": "^3.12.0",
+		"highlight.js": "^9.12.0",
+		"husky": "^0.14.3",
+		"ionicons": "^3.0.0",
+		"listr": "SamVerschueren/listr",
+		"marked": "^0.3.12",
+		"path": "^0.12.7",
+		"semver": "^5.5.0",
+		"tslint": "^5.9.1",
+		"tslint-ionic-rules": "0.0.14",
+		"typedoc": "^0.11.1",
+		"typescript": "^2.8.3"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.24.1"
+	}
+}
