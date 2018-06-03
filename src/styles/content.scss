@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+  line-height: 22px;
+}
+body {
+  font-family: var(--font-base-family);
+  font-size: 1em;
+  line-height: 1.375em;
+  color: var(--font-base-color);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-display-family);
+	font-weight: var(--font-display-weight);
+	color: var(--font-display-color);
+}
+h1 {
+  font-size: 4.25em;
+  line-height: 1.29411765em;
+  margin-top: 0.32352941em;
+  margin-bottom: 0.64705882em;
+}
+h2 {
+  font-size: 2.625em;
+  line-height: 1.04761905em;
+  margin-top: 0.52380952em;
+  margin-bottom: 0.52380952em;
+}
+h3 {
+  font-size: 1.625em;
+  line-height: 1.69230769em;
+  margin-top: 0.84615385em;
+  margin-bottom: 0em;
+}
+h4 {
+  font-size: 1em;
+  line-height: 1.375em;
+  margin-top: 1.375em;
+  margin-bottom: 0em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.375em;
+  margin-top: 1.375em;
+  margin-bottom: 0em;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.375em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/* Let's make sure all's aligned */
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+    transform: translateY(0);
+    transition: 150ms all cubic-bezier(0.23, 1, 0.320, 1);
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        background-color: var(--accent);
+        transition: 150ms all cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    &:hover, &:focus {
+        transform: translateY(-1px);
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}

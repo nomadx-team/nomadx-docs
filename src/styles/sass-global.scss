@@ -1,0 +1,6 @@
+$breakpoint-md: 720px;
+$breakpoint-lg: 1024px;
+
+@mixin breakpoint($point) {
+	@media (min-width: $point) { @content ; }
+}

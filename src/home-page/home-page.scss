@@ -1,0 +1,33 @@
+home-page {
+	main {
+		padding-top: calc(calc(100vw * 9) / 16);
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	section {
+		width: 100%;
+		padding: 16px;
+
+		.content {
+			width: 100%;
+			max-width: var(--max-width);
+			margin: 0 auto;
+		}
+
+		&.intro {
+			background-color: var(--gray0);
+			height: 256px;
+			width: 100%;
+		}
+	}
+}
+
+
+@include breakpoint($breakpoint-md) {
+	home-page {
+		main {
+			padding-top: 512px;
+		}
+	}
+}

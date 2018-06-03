@@ -1,0 +1,43 @@
+home-page-section {
+	display: block;
+
+	section {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 128px;
+	}
+
+	img {
+		padding: 16px;
+		width: 72px;
+		height: 72px;
+	}
+
+	.text {
+		width: calc(100% - 64px);
+		display: flex;
+		flex-flow: column nowrap;
+
+		border-bottom: 2px dotted var(--gray);
+
+		h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+@include breakpoint($breakpoint-md) {
+	app-home-section {
+		section {
+			flex-flow: row nowrap;
+		}
+		img {
+			width: 56px;
+			height: 56px;
+		}
+
+	}
+}

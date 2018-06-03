@@ -15,8 +15,8 @@ exports.config = {
 	outputTargets: [
 		{
 			type: 'www',
-			dir: 'www/docs',
-			baseUrl: '/docs',
+			dir: 'www',
+			baseUrl: '/',
 		}
 	]
 };

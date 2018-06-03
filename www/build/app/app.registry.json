@@ -1,0 +1,43 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "global": "app.global.js",
+  "core": "app.core.js",
+  "components": {
+    "app-footer": {
+      "$": "app-footer"
+    },
+    "app-hero": {
+      "$": "app-hero"
+    },
+    "app-hero-content": {
+      "$": "app-hero"
+    },
+    "app-nav": {
+      "$": "app-nav"
+    },
+    "app-root": {
+      "$": "app-root"
+    },
+    "component-page": {
+      "$": "component-page"
+    },
+    "home-page": {
+      "$": "app-nav"
+    },
+    "home-page-section": {
+      "$": "home-page-section"
+    },
+    "stencil-route": {
+      "$": "app-root"
+    },
+    "stencil-route-link": {
+      "$": "app-nav"
+    },
+    "stencil-router": {
+      "$": "app-root"
+    }
+  }
+}
